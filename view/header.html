@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>安全监测平台</title>
+
+	<!-- Le styles -->
+	<link href="./resource/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="./resource/bootstrap/css/bootstrap-g.css" rel="stylesheet">
+	<link href="./resource/style.less" rel="stylesheet/less" type="text/css">
+
+	<script src="./resource/jquery-1.9.0.min.js" type="text/javascript"></script>
+	<script src="./resource/highcharts/js/highcharts.js" type="text/javascript"></script>
+	<script src="./resource/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="./resource/less-1.3.3.min.js" type="text/javascript"></script>
+
+	<script src="./resource/global.js" type="text/javascript"></script>
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div id="myModal" class="modal hide fade win-frame" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	</div>
+	<div class="modal-body">
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true" id="modalRight">确定</button>
+	</div>
+</div>
+<div class="global-body">
+	<div class="header">
+		<div class="global-title">
+			<div class="btn btn-danger" onClick="winFrame('./window.website.add');">添加站点</div>
+		</div>
+		<div class="global-banner">
+			<div class="pull-left">
+				<ul class="content-nav">
+					<li>
+						<a href="./about" class="<?php if($view == 'about') echo 'nav-on'; ?>">概况</a>
+					</li>
+					<li><a href="#">行为</a></li>
+					<li><a href="#">可用性</a></li>
+					<li><a href="./performance" class="<?php if($view == 'performance') echo 'nav-on'; ?>">性能</a></li>
+					<li><a href="./scan" class="<?php if($view == 'scan') echo 'nav-on'; ?>">扫描</a></li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<a href="http://198.23.241.130:5601" class="btn" target="_blank">事件分析</a>
+				<div class="btn">退出</div>
+			</div>
+		</div>
+	</div>
+	<div class="bodyer">
+		<div class="global-nav">
+			<ul class="nav-ul">
+				<?php for($i = 0; $i <20; $i++){ ?>
+					<li>demo.com</li>
+				<?php } ?>
+			</ul>
+		</div>
